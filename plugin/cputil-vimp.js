@@ -31,7 +31,7 @@ var INFO = xml`
     });
 
     description = "Copy the title in a format `[<url>](<url>)` for markdown";
-    commands.addUserCommand(["cpmd-url"], description, function (args) {
+    commands.addUserCommand(["cpmdurl"], description, function (args) {
         var url = content.document.location.href;
         var text = "[" + url + "]" + "(" + url + ")";
         util.copyToClipboard(text);
@@ -39,7 +39,7 @@ var INFO = xml`
     });
 
     description = "Copy the title in a format `[<title>](<url>)` for markdown";
-    commands.addUserCommand(["cpmd-title"], description, function (args) {
+    commands.addUserCommand(["cpmdtitle"], description, function (args) {
         var title = content.document.title;
         var url = content.document.location.href;
         var text = "[" + title + "]" + "(" + url + ")";

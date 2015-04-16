@@ -21,6 +21,13 @@ var INFO = xml`
 (function () {
     var description;
 
+    description = "Copy the title";
+    commands.addUserCommand(["cptitle"], description, function (args) {
+        var title = content.document.title;
+        util.copyToClipboard(title);
+        liberator.echo("Copy to clipboard: " + title);
+    });
+
     description = "Copy the title in a format `<title> <url>` for tweet";
     commands.addUserCommand(["cptweet"], description, function (args) {
         var title = content.document.title;
